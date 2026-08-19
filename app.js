@@ -1820,11 +1820,15 @@ function mostrarHistorialCiclos() {
             document.createElement("h3");
 
         titulo.textContent =
-            "Ciclo " +
-            ciclo.kmInicio +
-            " → " +
-            ciclo.kmFin +
-            " km";
+        ciclo.kmInicio +
+        " → " +
+        ciclo.kmFin +
+        " km (" +
+        formatearRangoFechas(
+            ciclo.fechaInicio,
+            ciclo.fechaFin
+        ) +
+        ")";
 
 
         // Información básica
