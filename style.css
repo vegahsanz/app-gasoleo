@@ -650,19 +650,32 @@ li {
        PAGOS
     ========================= */
 
-    #contenidoResumenCiclo > div > div {
-        min-height: 44px;
+   #contenidoResumenCiclo > div > div {
+    min-height: 44px;
 
-        padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
 
-        font-size: 16px;
-    }
+    padding: 10px 6px;
+
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
 
-    #contenidoResumenCiclo input[type="checkbox"] {
-        transform: scale(1.35);
-        margin-right: 5px;
-    }
+#contenidoResumenCiclo input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+
+    margin: 0;
+
+    transform: none;
+
+    flex-shrink: 0;
+}
 
 
     /* =========================
