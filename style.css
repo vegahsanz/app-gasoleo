@@ -1,0 +1,759 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+
+/* =========================================
+   CABECERA
+========================================= */
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+body > p {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+h3 {
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   COLUMNAS PRINCIPALES
+========================================= */
+
+.columnas {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.columna {
+    flex: 1;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   FORMULARIOS
+========================================= */
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+button {
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   BOTONES GENERALES
+========================================= */
+
+button {
+    width: 100%;
+    padding: 11px;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #333;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+/* =========================================
+   USUARIOS DEL VIAJE
+========================================= */
+
+#usuariosViaje {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+#usuariosViaje label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px;
+
+    border: 1px solid #ddd;
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+#usuariosViaje input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   HISTORIALES VIAJES / REPOSTAJES
+========================================= */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    line-height: 1.4;
+}
+
+#listaViajes li,
+#listaRepostajes li {
+    margin-bottom: 16px;
+    padding: 12px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   BOTONES DE VIAJE
+========================================= */
+
+.accionesViaje {
+    display: inline-flex;
+    gap: 6px;
+
+    margin-left: 10px;
+    margin-top: 0;
+
+    vertical-align: middle;
+}
+
+.accionesViaje button {
+    width: 34px;
+    height: 34px;
+
+    min-height: 0;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accionesViaje button {
+    width: auto;
+
+    margin: 0;
+
+    padding: 7px 12px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BOTÓN ELIMINAR REPOSTAJE
+========================================= */
+
+#listaRepostajes li button {
+    width: 30px;
+    height: 30px;
+    min-height: 0;
+
+    padding: 0;
+    margin-left: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    background: transparent;
+    border: none;
+
+    font-size: 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    vertical-align: middle;
+}
+
+#listaRepostajes li button:hover {
+    background-color: #eeeeee;
+}
+
+
+/* =========================================
+   RESUMEN DEL CICLO
+========================================= */
+
+#resumenCiclo {
+    margin-top: 35px;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   TABLA DEL RESUMEN
+========================================= */
+
+#contenidoResumenCiclo table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+#contenidoResumenCiclo th,
+#contenidoResumenCiclo td {
+    padding: 10px;
+
+    border-bottom: 1px solid #ddd;
+
+    text-align: right;
+}
+
+#contenidoResumenCiclo th {
+    background-color: #f1f1f1;
+}
+
+#contenidoResumenCiclo th:first-child,
+#contenidoResumenCiclo td:first-child {
+    text-align: left;
+}
+
+
+/* =========================================
+   PAGOS DEL CICLO
+========================================= */
+
+#contenidoResumenCiclo > div {
+    margin-top: 10px;
+}
+
+#contenidoResumenCiclo > div > div {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+#contenidoResumenCiclo input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+
+    transform: scale(1.2);
+}
+
+
+/* =========================================
+   HISTORIAL DE CICLOS
+========================================= */
+
+#historialCiclos {
+    margin-top: 35px;
+}
+
+#listaCiclos > div {
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#listaCiclos h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+#listaCiclos p {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+#listaCiclos button {
+    width: auto;
+
+    margin: 0;
+
+    padding: 8px 14px;
+}
+
+
+/* =========================================
+   MODALES / AVISOS
+========================================= */
+
+.aviso-oculto {
+    display: none;
+}
+
+.aviso-visible {
+    display: flex;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color:
+        rgba(0, 0, 0, 0.70);
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+.aviso-contenido {
+    width: 80%;
+    max-width: 600px;
+
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.aviso-contenido h2 {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   VIAJES PENDIENTES DE OLVIDÓN
+========================================= */
+
+#listaPendientes > div {
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 750px) {
+
+    body {
+        margin: 0;
+        padding: 12px;
+        max-width: none;
+        background-color: #f5f5f5;
+    }
+
+
+    h1 {
+        font-size: 26px;
+        margin-top: 10px;
+    }
+
+
+    h2 {
+        font-size: 21px;
+    }
+
+
+    h3 {
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       COLUMNAS
+    ========================= */
+
+    .columnas {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+
+    .columna {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 18px;
+
+        border-radius: 10px;
+    }
+
+
+    /* =========================
+       CAMPOS
+    ========================= */
+
+    input,
+    select {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+
+    /*
+    16px es importante en iPhone:
+    evita que Safari haga zoom automático
+    al tocar un input.
+    */
+
+
+    button {
+        min-height: 44px;
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       USUARIOS
+    ========================= */
+
+    #usuariosViaje {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+
+    #usuariosViaje label {
+        min-height: 44px;
+
+        padding: 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       VIAJES
+    ========================= */
+
+    #listaViajes,
+    #listaRepostajes {
+        padding-left: 0;
+        list-style: none;
+    }
+
+
+    #listaViajes li,
+    #listaRepostajes li {
+        padding: 14px;
+        margin-bottom: 10px;
+    }
+
+
+    
+
+    #listaRepostajes li button {
+        width: 100%;
+    }
+
+
+    /* =========================
+       RESUMEN CICLO
+    ========================= */
+
+    #resumenCiclo {
+        padding: 16px;
+        margin-top: 20px;
+    }
+
+
+    #contenidoResumenCiclo {
+        overflow-x: auto;
+    }
+
+
+/* =========================
+   TABLA COMO TARJETAS
+========================= */
+
+#contenidoResumenCiclo table {
+    width: 100%;
+    min-width: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#contenidoResumenCiclo table tr:first-child {
+    display: none;
+}
+
+#contenidoResumenCiclo table tr {
+    display: block;
+
+    margin-bottom: 14px;
+    padding: 14px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#contenidoResumenCiclo table td {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid #eee;
+
+    text-align: right;
+}
+
+#contenidoResumenCiclo table td:last-child {
+    border-bottom: none;
+}
+
+
+/* Etiquetas de cada dato */
+
+#contenidoResumenCiclo table td:nth-child(1)::before {
+    content: "Usuario";
+}
+
+#contenidoResumenCiclo table td:nth-child(2)::before {
+    content: "Km";
+}
+
+#contenidoResumenCiclo table td:nth-child(3)::before {
+    content: "Uso";
+}
+
+#contenidoResumenCiclo table td:nth-child(4)::before {
+    content: "Le corresponde";
+}
+
+#contenidoResumenCiclo table td:nth-child(5)::before {
+    content: "Ha pagado";
+}
+
+#contenidoResumenCiclo table td:nth-child(6)::before {
+    content: "Saldo";
+}
+
+
+#contenidoResumenCiclo table td::before {
+    font-weight: bold;
+    text-align: left;
+}
+
+
+    /* =========================
+       PAGOS
+    ========================= */
+
+    #contenidoResumenCiclo > div > div {
+        min-height: 44px;
+
+        padding: 10px 0;
+
+        font-size: 16px;
+    }
+
+
+    #contenidoResumenCiclo input[type="checkbox"] {
+        transform: scale(1.35);
+        margin-right: 5px;
+    }
+
+
+    /* =========================
+       HISTORIAL CICLOS
+    ========================= */
+
+    #historialCiclos {
+        margin-top: 20px;
+    }
+
+
+    #listaCiclos > div {
+        padding: 15px;
+    }
+
+
+    #listaCiclos button {
+        width: 100%;
+        min-height: 42px;
+    }
+
+
+    /* =========================
+       MODALES
+    ========================= */
+
+    .aviso-contenido {
+        width: calc(100% - 24px);
+        max-width: none;
+
+        padding: 20px;
+
+        box-sizing: border-box;
+
+        max-height: 90vh;
+    }
+
+
+    .aviso-contenido h2 {
+        font-size: 22px;
+    }
+
+    #contenidoResumenCiclo table tr td:first-child {
+    font-weight: normal;
+    border-bottom: 3px solid #cfcfcf;
+    padding-bottom: 8px;
+    margin-bottom: 6px;
+}
+    #contenidoResumenCiclo table tr td:first-child {
+        font-size: 16px;
+}
+}
+.accionesViaje {
+    display: inline-flex;
+    gap: 4px;
+
+    margin-left: 8px;
+    margin-top: 0;
+
+    vertical-align: middle;
+}
+
+.accionesViaje button {
+    flex: none;
+
+    width: 30px;
+    height: 30px;
+    min-height: 0;
+
+    padding: 0;
+    margin: 0;
+
+    background: transparent;
+    border: none;
+
+    font-size: 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accionesViaje button:hover {
+    background-color: #eeeeee;
+}
+.saldoPositivo {
+    color: green;
+    font-weight: bold;
+}
+
+.saldoNegativo {
+    color: red;
+    font-weight: bold;
+}

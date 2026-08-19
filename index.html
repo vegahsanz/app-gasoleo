@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Control gasolina</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="panelLogin">
+
+    <h2>Acceso</h2>
+
+    <input
+        type="email"
+        id="emailLogin"
+        placeholder="Correo"
+    >
+
+    <input
+        type="password"
+        id="passwordLogin"
+        placeholder="Contraseña"
+    >
+
+    <button id="botonLogin">
+        Entrar
+    </button>
+
+    <p id="mensajeLogin"></p>
+
+</div>
+
+<div id="appPrincipal" style="display: none;">
+
+    <button id="botonLogout">
+    Cerrar sesión
+    </button>
+
+    <h1>Control de Gasolina</h1>
+
+    <div class="columnas">
+
+        <!-- COLUMNA VIAJES -->
+        <div class="columna">
+
+            <h2>Nuevo viaje</h2>
+
+            <label>Usuarios del viaje:</label>
+
+<div id="usuariosViaje">
+
+    <label>
+        <input type="checkbox" value="Vega">
+        Vega
+    </label>
+
+    <label>
+        <input type="checkbox" value="Félix">
+        Félix
+    </label>
+
+    <label>
+        <input type="checkbox" value="Estíbaliz">
+        Estíbaliz
+    </label>
+
+    <label>
+        <input type="checkbox" value="Mario">
+        Mario
+    </label>
+
+    <label>
+        <input type="checkbox" value="Olvidón">
+        Olvidón
+    </label>
+
+</div>
+
+            <label>Kilómetros iniciales:</label>
+            <input id="kmInicial" type="number">
+
+            <label>Kilómetros finales:</label>
+            <input id="kmFinal" type="number">
+
+            <button id="guardarViaje">Guardar viaje</button>
+
+            <p id="resultado"></p>
+
+            <h2>Viajes registrados</h2>
+
+            <button id="toggleViajes">
+                Mostrar viajes
+            </button>
+
+            <ul id="listaViajes"></ul>
+
+        </div>
+
+
+        <!-- COLUMNA REPOSTAJES -->
+        <div class="columna">
+
+            <h2>Nuevo repostaje</h2>
+
+            <label>Pagado por:</label>
+            <select id="pagador">
+                <option>Vega</option>
+                <option>Félix</option>
+                <option>Estíbaliz</option>
+                <option>Mario</option>
+            </select>
+
+            <label>Importe (€):</label>
+            <input id="importeRepostaje" type="number" step="0.01">
+
+            <label>Kilometraje del coche:</label>
+            <input id="kmRepostaje" type="number">
+
+            <label>Fecha:</label>
+            <input id="fechaRepostaje" type="date">
+
+            <label>Litros:</label>
+            <input id="litrosRepostaje" type="number" step="0.01">
+
+            
+            <label>Tipo de repostaje:</label>
+            <select id="tipoRepostaje">
+                <option value="completo">Completo</option>
+                <option value="parcial">Parcial</option>
+            </select>
+
+            <button id="guardarRepostaje">Guardar repostaje</button>
+
+            <p id="resultadoRepostaje"></p>
+
+            <h2>Repostajes registrados</h2>
+
+            <button id="toggleRepostajes">
+            Mostrar repostajes
+            </button>
+
+            <ul id="listaRepostajes"></ul>
+
+        </div>
+
+    </div>
+<div id="avisoKm" class="aviso-oculto">
+
+    <div class="aviso-contenido">
+
+        <h2>⚠️ Aviso de kilometraje</h2>
+
+        <p id="textoAvisoKm"></p>
+
+        <h3>¿Quieres registrar los kilómetros que faltan?</h3>
+
+        <label>Usuario:</label>
+        <select id="usuarioKmFaltantes">
+            <option>Vega</option>
+            <option>Félix</option>
+            <option>Estíbaliz</option>
+            <option>Mario</option>
+            <option>Olvidón</option>
+        </select>
+
+        <label>Fecha:</label>
+        <input id="fechaKmFaltantes" type="date">
+
+        <button id="registrarKmFaltantes">
+            Registrar kilómetros faltantes
+        </button>
+
+        <button id="cerrarAvisoKm">
+            No registrar ahora
+        </button>
+
+    </div>
+
+</div>
+
+<div id="panelPendientes" class="aviso-oculto">
+
+    <div class="aviso-contenido">
+
+        <h2>⚠️ Kilómetros pendientes de asignar</h2>
+
+        <p>
+            Antes de calcular los pagos finales,
+            hay que asignar todos los viajes de Olvidón.
+        </p>
+
+        <div id="listaPendientes"></div>
+
+        <button id="cerrarPendientes">
+            Cerrar
+        </button>
+
+    </div>
+
+</div>
+
+<div id="resumenCiclo">
+
+    <h2>Resumen del último ciclo</h2>
+
+    <div id="contenidoResumenCiclo">
+        Todavía no hay ningún ciclo cerrado.
+    </div>
+
+</div>
+
+<div id="historialCiclos">
+
+    <h2>Historial de ciclos</h2>
+
+    <div id="listaCiclos">
+        Todavía no hay ciclos cerrados.
+    </div>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+</div>
+</body>
+
+</html>
