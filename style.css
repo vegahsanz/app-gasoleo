@@ -345,6 +345,8 @@ li {
 #listaCiclos h3 {
     margin-top: 0;
     margin-bottom: 8px;
+   font-weight: normal;
+    font-size: 16px;
 }
 
 #listaCiclos p {
