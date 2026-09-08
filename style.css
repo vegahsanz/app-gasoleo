@@ -93,6 +93,31 @@ body {
     font-size: 14px;
 }
 
+#panelLogin input {
+    margin-bottom: 16px;
+}
+
+#botonLogin {
+    width: 100%;
+
+    min-height: 46px;
+
+    margin-top: 4px;
+
+    padding: 12px 16px;
+
+    background-color: var(--verde);
+    color: white;
+
+    border-radius: 11px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#botonLogin:hover {
+    background-color: var(--verde-oscuro);
+}
 
 /* =========================================
    APP
