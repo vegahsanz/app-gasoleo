@@ -871,10 +871,6 @@ ul {
 
 @media (max-width: 750px) {
 
-     .gridCampos {
-        min-width: 0;
-    }
-
     .gridCampos > * {
         min-width: 0;
     }
@@ -883,43 +879,6 @@ ul {
         width: 100%;
         min-width: 0;
     }
-
-    input[type="date"] {
-    width: calc(100% - 8px);
-    max-width: calc(100% - 8px);
-    min-width: 0;
-
-    height: 44px;
-
-    padding: 0 10px;
-
-    box-sizing: border-box;
-
-    display: block;
-    overflow: hidden;
-
-    line-height: normal;
-   }
-
-   input[type="date"]::-webkit-date-and-time-value {
-    margin: 0;
-    padding: 0;
-
-    text-align: left;
-   }
-
-   input[type="date"]::-webkit-datetime-edit {
-    padding: 0;
-   }
-
-   .gridCampos > * {
-    min-width: 0;
-   }
-
-.campoCompleto {
-    width: 100%;
-    min-width: 0;
-   }
    
     .cabeceraApp {
         padding:
@@ -940,11 +899,18 @@ ul {
       #fechaViaje,
       #fechaRepostaje,
       #fechaKmFaltantes {
-          width: 100%;
-          max-width: 100%;
-          min-width: 0;
-          box-sizing: border-box;
-      }
+       width: calc(100% - 8px);
+       max-width: calc(100% - 8px);
+       min-width: 0;
+   
+       height: 44px;
+   
+       padding: 10px 12px;
+   
+       box-sizing: border-box;
+   
+       display: block;
+   }
 
     .iconoApp {
         width: 38px;
