@@ -871,6 +871,32 @@ ul {
 
 @media (max-width: 750px) {
 
+     .gridCampos {
+        min-width: 0;
+    }
+
+    .gridCampos > * {
+        min-width: 0;
+    }
+
+    .campoCompleto {
+        width: 100%;
+        min-width: 0;
+    }
+
+    input[type="date"] {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        display: block;
+
+        -webkit-appearance: none;
+        appearance: none;
+    } 
+   
     .cabeceraApp {
         padding:
             18px
