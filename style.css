@@ -911,6 +911,15 @@ ul {
    input[type="date"]::-webkit-datetime-edit {
     padding: 0;
    }
+
+   .gridCampos > * {
+    min-width: 0;
+   }
+
+.campoCompleto {
+    width: 100%;
+    min-width: 0;
+   }
    
     .cabeceraApp {
         padding:
