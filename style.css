@@ -883,6 +883,18 @@ ul {
     .marcaApp {
         gap: 9px;
     }
+   .campo {
+          min-width: 0;
+      }
+      
+      #fechaViaje,
+      #fechaRepostaje,
+      #fechaKmFaltantes {
+          width: 100%;
+          max-width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
+      }
 
     .iconoApp {
         width: 38px;
