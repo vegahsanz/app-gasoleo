@@ -876,6 +876,7 @@ ul {
     }
 
     .campoCompleto {
+        grid-column: 1 / -1;
         width: 100%;
         min-width: 0;
     }
@@ -896,20 +897,18 @@ ul {
           min-width: 0;
       }
       
-      #fechaViaje,
-      #fechaRepostaje,
-      #fechaKmFaltantes {
-       width: calc(100% - 8px);
-       max-width: calc(100% - 8px);
+     #fechaViaje,
+     #fechaRepostaje,
+     #fechaKmFaltantes {
+       width: -webkit-fill-available;
+       max-width: 100%;
        min-width: 0;
    
        height: 44px;
-   
-       padding: 10px 12px;
+       padding: 0 12px;
    
        box-sizing: border-box;
-   
-       display: block;
+       overflow: hidden;
    }
 
     .iconoApp {
