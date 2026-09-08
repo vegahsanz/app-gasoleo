@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Control gasolina</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css?v=3"
+    >
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     LOGIN
+========================================= -->
+
+<div id="panelLogin">
+
+    <div class="loginCabecera">
+
+        <div class="iconoApp">
+            ⛽
+        </div>
+
+        <div>
+            <h2>Control de gasolina</h2>
+
+            <p>
+                Viajes, repostajes y cuentas claras.
+            </p>
+        </div>
+
+    </div>
+
+
+    <input
+        type="email"
+        id="emailLogin"
+        placeholder="Correo"
+    >
+
+
+    <input
+        type="password"
+        id="passwordLogin"
+        placeholder="Contraseña"
+    >
+
+
+    <button id="botonLogin">
+        Entrar
+    </button>
+
+
+    <p id="mensajeLogin"></p>
+
+</div>
+
+
+
+<!-- =========================================
+     APP
+========================================= -->
+
+<div
+    id="appPrincipal"
+    style="display: none;"
+>
+
+
+    <!-- CABECERA -->
+
+    <header class="cabeceraApp">
+
+        <div class="marcaApp">
+
+            <div class="iconoApp">
+                ⛽
+            </div>
+
+            <div>
+
+                <h1>
+                    Control de gasolina
+                </h1>
+
+                <p>
+                    Viajes, repostajes y cuentas claras.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button id="botonLogout">
+            Cerrar sesión
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================================
+         BLOQUES PRINCIPALES
+    ========================================= -->
+
+    <main class="contenidoApp">
+
+
+
+        <!-- =====================================
+             NUEVO VIAJE
+        ====================================== -->
+
+        <section class="tarjeta tarjetaFormulario">
+
+
+            <div class="cabeceraTarjeta">
+
+                <div class="iconoSeccion">
+                    🚗
+                </div>
+
+                <div>
+
+                    <h2>
+                        Nuevo viaje
+                    </h2>
+
+                    <p>
+                        Registra un nuevo trayecto del coche.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="bloqueUsuarios">
+
+                <label class="etiquetaGrupo">
+                    Usuarios del viaje
+                </label>
+
+
+                <div id="usuariosViaje">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="Vega"
+                        >
+                        Vega
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="Félix"
+                        >
+                        Félix
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="Estíbaliz"
+                        >
+                        Estíbaliz
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="Mario"
+                        >
+                        Mario
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="Olvidón"
+                        >
+                        Olvidón
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gridCampos">
+
+
+                <div class="campo">
+
+                    <label>
+                        Kilómetros iniciales
+                    </label>
+
+                    <input
+                        id="kmInicial"
+                        type="number"
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Kilómetros finales
+                    </label>
+
+                    <input
+                        id="kmFinal"
+                        type="number"
+                       
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Fecha
+                    </label>
+
+                    <input
+                        id="fechaViaje"
+                        type="date"
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Nota
+                        <span class="opcional">
+                            (opcional)
+                        </span>
+                    </label>
+
+                    <input
+                        id="notaViaje"
+                        type="text"
+                        
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                id="guardarViaje"
+                class="botonPrincipal"
+            >
+                Guardar viaje
+            </button>
+
+
+            <p id="resultado"></p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             VIAJES REGISTRADOS
+        ====================================== -->
+
+        <section class="tarjeta tarjetaCompacta">
+
+            <div class="filaCompacta">
+
+                <div class="filaCompactaTexto">
+
+                    <div class="iconoSeccion">
+                        ☰
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Viajes registrados
+                        </h3>
+
+                        <p>
+                            Consulta, edita o revisa tus viajes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="toggleViajes"
+                    class="botonSecundario"
+                >
+                    Mostrar viajes
+                </button>
+
+            </div>
+
+
+            <ul id="listaViajes"></ul>
+
+        </section>
+
+
+
+        <!-- =====================================
+             NUEVO REPOSTAJE
+        ====================================== -->
+
+        <section class="tarjeta tarjetaFormulario">
+
+
+            <div class="cabeceraTarjeta">
+
+                <div class="iconoSeccion">
+                    ⛽
+                </div>
+
+                <div>
+
+                    <h2>
+                        Nuevo repostaje
+                    </h2>
+
+                    <p>
+                        Registra un nuevo repostaje de gasolina.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gridCampos">
+
+
+                <div class="campo">
+
+                    <label>
+                        Pagado por
+                    </label>
+
+                    <select id="pagador">
+
+                        <option>
+                            Vega
+                        </option>
+
+                        <option>
+                            Félix
+                        </option>
+
+                        <option>
+                            Estíbaliz
+                        </option>
+
+                        <option>
+                            Mario
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Importe (€)
+                    </label>
+
+                    <input
+                        id="importeRepostaje"
+                        type="number"
+                        step="0.01"
+                        
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Kilometraje del coche
+                    </label>
+
+                    <input
+                        id="kmRepostaje"
+                        type="number"                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Fecha
+                    </label>
+
+                    <input
+                        id="fechaRepostaje"
+                        type="date"
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Litros
+                    </label>
+
+                    <input
+                        id="litrosRepostaje"
+                        type="number"
+                        step="0.01"
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Tipo de repostaje
+                    </label>
+
+                    <select id="tipoRepostaje">
+
+                        <option value="completo">
+                            Completo
+                        </option>
+
+                        <option value="parcial">
+                            Parcial
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                id="guardarRepostaje"
+                class="botonPrincipal"
+            >
+                Guardar repostaje
+            </button>
+
+
+            <p id="resultadoRepostaje"></p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             REPOSTAJES REGISTRADOS
+        ====================================== -->
+
+        <section class="tarjeta tarjetaCompacta">
+
+            <div class="filaCompacta">
+
+                <div class="filaCompactaTexto">
+
+                    <div class="iconoSeccion">
+                        ☰
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Repostajes registrados
+                        </h3>
+
+                        <p>
+                            Consulta los repostajes anteriores.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="toggleRepostajes"
+                    class="botonSecundario"
+                >
+                    Mostrar repostajes
+                </button>
+
+            </div>
+
+
+            <ul id="listaRepostajes"></ul>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RESUMEN ÚLTIMO CICLO
+        ====================================== -->
+
+        <section
+            id="resumenCiclo"
+            class="tarjeta"
+        >
+
+
+            <div class="cabeceraTarjeta">
+
+                <div class="iconoSeccion">
+                    📊
+                </div>
+
+                <div>
+
+                    <h2>
+                        Resumen del último ciclo
+                    </h2>
+
+                    <p>
+                        Reparto de kilómetros, gastos y pagos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div id="contenidoResumenCiclo">
+
+                Todavía no hay ningún ciclo cerrado.
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             HISTORIAL DE CICLOS
+        ====================================== -->
+
+        <section
+            id="historialCiclos"
+            class="tarjeta"
+        >
+
+
+            <div class="cabeceraTarjeta">
+
+                <div class="iconoSeccion">
+                    🕘
+                </div>
+
+                <div>
+
+                    <h2>
+                        Historial de ciclos
+                    </h2>
+
+                    <p>
+                        Consulta los ciclos anteriores.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div id="listaCiclos">
+
+                Todavía no hay ciclos cerrados.
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         AVISO KM FALTANTES
+    ========================================= -->
+
+    <div
+        id="avisoKm"
+        class="aviso-oculto"
+    >
+
+
+        <div class="aviso-contenido">
+
+
+            <h2>
+                ⚠️ Aviso de kilometraje
+            </h2>
+
+
+            <p id="textoAvisoKm"></p>
+
+
+            <h3>
+                ¿Quieres registrar los kilómetros que faltan?
+            </h3>
+
+
+            <label>
+                Usuario
+            </label>
+
+
+            <select id="usuarioKmFaltantes">
+
+                <option>
+                    Vega
+                </option>
+
+                <option>
+                    Félix
+                </option>
+
+                <option>
+                    Estíbaliz
+                </option>
+
+                <option>
+                    Mario
+                </option>
+
+                <option>
+                    Olvidón
+                </option>
+
+            </select>
+
+
+            <label>
+                Fecha
+            </label>
+
+
+            <input
+                id="fechaKmFaltantes"
+                type="date"
+            >
+
+
+            <button id="registrarKmFaltantes">
+
+                Registrar kilómetros faltantes
+
+            </button>
+
+
+            <button
+                id="cerrarAvisoKm"
+                class="botonSecundario"
+            >
+
+                No registrar ahora
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         PENDIENTES OLVIDÓN
+    ========================================= -->
+
+    <div
+        id="panelPendientes"
+        class="aviso-oculto"
+    >
+
+
+        <div class="aviso-contenido">
+
+
+            <h2>
+                ⚠️ Kilómetros pendientes de asignar
+            </h2>
+
+
+            <p>
+                Antes de calcular los pagos finales,
+                hay que asignar todos los viajes de Olvidón.
+            </p>
+
+
+            <div id="listaPendientes"></div>
+
+
+            <button
+                id="cerrarPendientes"
+                class="botonSecundario"
+            >
+                Cerrar
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="app.js?v=3"></script>
+
+</div>
+
+
+</body>
+
+</html>

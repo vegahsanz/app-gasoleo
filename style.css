@@ -1,0 +1,1193 @@
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --verde: #2f8f5b;
+    --verde-oscuro: #256f47;
+    --verde-suave: #eaf5ee;
+
+    --fondo: #f4f6f4;
+    --tarjeta: #ffffff;
+
+    --texto: #223129;
+    --texto-secundario: #7b847f;
+
+    --borde: #e1e6e2;
+    --borde-fuerte: #d2d8d3;
+
+    --rojo: #d64b4b;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--fondo);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background-color: var(--fondo);
+    color: var(--texto);
+
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+#panelLogin {
+    width: calc(100% - 32px);
+    max-width: 420px;
+
+    margin: 70px auto;
+
+    padding: 28px;
+
+    background-color: white;
+
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.loginCabecera {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+.loginCabecera h2 {
+    margin: 0;
+
+    font-size: 23px;
+}
+
+.loginCabecera p {
+    margin: 3px 0 0 0;
+
+    color: var(--texto-secundario);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+#appPrincipal {
+    width: 100%;
+}
+
+
+/* =========================================
+   CABECERA APP
+========================================= */
+
+.cabeceraApp {
+    max-width: 1050px;
+
+    margin: 0 auto;
+    padding: 26px 22px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.marcaApp {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.marcaApp h1 {
+    margin: 0;
+
+    font-size: 28px;
+    letter-spacing: -0.7px;
+}
+
+.marcaApp p {
+    margin: 3px 0 0;
+
+    color: var(--texto-secundario);
+
+    font-size: 14px;
+}
+
+.iconoApp {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background-color: var(--verde-suave);
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.contenidoApp {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 16px 22px 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.tarjeta {
+    background-color: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+
+    padding: 22px;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.025);
+}
+
+.tarjetaFormulario {
+    align-self: start;
+}
+
+.tarjetaCompacta {
+    padding: 16px 18px;
+}
+
+
+/* =========================================
+   CABECERA DE TARJETA
+========================================= */
+
+.cabeceraTarjeta {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    margin-bottom: 22px;
+}
+
+.iconoSeccion {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background-color: var(--verde-suave);
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+.cabeceraTarjeta h2 {
+    margin: 0;
+
+    font-size: 20px;
+    letter-spacing: -0.3px;
+}
+
+.cabeceraTarjeta p {
+    margin: 3px 0 0;
+
+    color: var(--texto-secundario);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORMULARIOS
+========================================= */
+
+label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #3d4942;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.opcional {
+    color: var(--texto-secundario);
+
+    font-weight: normal;
+}
+
+input,
+select,
+button {
+    font-family: inherit;
+}
+
+input,
+select {
+    width: 100%;
+
+    height: 44px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--borde-fuerte);
+    border-radius: 11px;
+
+    background-color: white;
+    color: var(--texto);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
+}
+
+input::placeholder {
+    color: #a7aea9;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--verde);
+
+    box-shadow:
+        0 0 0 3px rgba(47, 143, 91, 0.10);
+}
+
+
+/* =========================================
+   GRID CAMPOS
+========================================= */
+
+.gridCampos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px 16px;
+
+    margin-bottom: 18px;
+}
+
+.campo {
+    min-width: 0;
+}
+
+
+/* =========================================
+   USUARIOS
+========================================= */
+
+.bloqueUsuarios {
+    margin-bottom: 20px;
+}
+
+.etiquetaGrupo {
+    margin-bottom: 8px;
+}
+
+#usuariosViaje {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+#usuariosViaje label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    width: auto;
+
+    margin: 0;
+
+    padding: 8px 11px;
+
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+
+    background-color: #fafbfa;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s,
+        border-color 0.15s,
+        color 0.15s;
+}
+
+#usuariosViaje label:has(input:checked) {
+    background-color: var(--verde-suave);
+
+    border-color: var(--verde);
+
+    color: var(--verde-oscuro);
+}
+
+#usuariosViaje input[type="checkbox"] {
+    width: auto;
+    height: auto;
+
+    margin: 0;
+
+    accent-color: var(--verde);
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s,
+        transform 0.05s;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+.botonPrincipal {
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 11px 16px;
+
+    background-color: var(--verde);
+    color: white;
+
+    border-radius: 11px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.botonPrincipal:hover {
+    background-color: var(--verde-oscuro);
+}
+
+.botonSecundario {
+    width: auto;
+
+    min-height: 38px;
+
+    padding: 8px 13px;
+
+    background-color: var(--verde-suave);
+
+    color: var(--verde-oscuro);
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.botonSecundario:hover {
+    background-color: #dceee3;
+}
+
+
+/* =========================================
+   CERRAR SESIÓN
+========================================= */
+
+#botonLogout {
+    width: auto;
+
+    min-height: 36px;
+
+    padding: 8px 12px;
+
+    background-color: white;
+    color: #59645d;
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#botonLogout:hover {
+    background-color: #f0f2f0;
+}
+
+
+/* =========================================
+   MENSAJES
+========================================= */
+
+#resultado,
+#resultadoRepostaje,
+#mensajeLogin {
+    margin-bottom: 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FILAS COMPACTAS
+========================================= */
+
+.filaCompacta {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+}
+
+.filaCompactaTexto {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.filaCompactaTexto h3 {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+.filaCompactaTexto p {
+    margin: 2px 0 0;
+
+    color: var(--texto-secundario);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   LISTAS
+========================================= */
+
+ul {
+    margin: 14px 0 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+#listaViajes li,
+#listaRepostajes li {
+    margin-bottom: 8px;
+
+    padding: 11px 12px;
+
+    background-color: #fafbfa;
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   ACCIONES VIAJE
+========================================= */
+
+.accionesViaje {
+    display: inline-flex;
+
+    gap: 3px;
+
+    margin-left: 6px;
+
+    vertical-align: middle;
+}
+
+.accionesViaje button {
+    width: 29px;
+    height: 29px;
+    min-height: 0;
+
+    padding: 0;
+    margin: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+.accionesViaje button:hover {
+    background-color: #e9ecea;
+}
+
+
+/* =========================================
+   NOTA VIAJE
+========================================= */
+
+.notaViajeVisible {
+    margin-top: 9px;
+
+    padding: 8px 10px;
+
+    background-color: var(--verde-suave);
+
+    border-radius: 8px;
+
+    color: #4e5a53;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   BOTÓN REPOSTAJE
+========================================= */
+
+#listaRepostajes li button {
+    width: 29px;
+    height: 29px;
+    min-height: 0;
+
+    padding: 0;
+    margin-left: 6px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+#listaRepostajes li button:hover {
+    background-color: #e9ecea;
+}
+
+
+/* =========================================
+   RESUMEN
+========================================= */
+
+#resumenCiclo {
+    grid-column: 1 / -1;
+}
+
+#contenidoResumenCiclo {
+    margin-top: 4px;
+}
+
+
+/* =========================================
+   TABLA RESUMEN
+========================================= */
+
+#contenidoResumenCiclo table {
+    width: 100%;
+
+    margin-top: 14px;
+    margin-bottom: 20px;
+
+    border-collapse: collapse;
+}
+
+#contenidoResumenCiclo th,
+#contenidoResumenCiclo td {
+    padding: 10px;
+
+    border-bottom: 1px solid var(--borde);
+
+    text-align: right;
+}
+
+#contenidoResumenCiclo th {
+    background-color: #f7f9f7;
+
+    color: #667069;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#contenidoResumenCiclo th:first-child,
+#contenidoResumenCiclo td:first-child {
+    text-align: left;
+}
+
+
+/* =========================================
+   SALDOS
+========================================= */
+
+.saldoPositivo {
+    color: var(--verde);
+
+    font-weight: 700;
+}
+
+.saldoNegativo {
+    color: var(--rojo);
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PAGOS
+========================================= */
+
+#contenidoResumenCiclo > div {
+    margin-top: 8px;
+}
+
+#contenidoResumenCiclo > div > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid var(--borde);
+}
+
+#contenidoResumenCiclo input[type="checkbox"] {
+    width: auto;
+    height: auto;
+
+    margin: 0;
+
+    accent-color: var(--verde);
+}
+
+
+/* =========================================
+   HISTORIAL CICLOS
+========================================= */
+
+#historialCiclos {
+    grid-column: 1 / -1;
+}
+
+#listaCiclos > div {
+    margin-bottom: 9px;
+
+    padding: 14px;
+
+    background-color: #fafbfa;
+
+    border: 1px solid var(--borde);
+    border-radius: 11px;
+}
+
+#listaCiclos h3 {
+    margin: 0 0 6px;
+
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#listaCiclos p {
+    margin: 0 0 10px;
+
+    color: #626d66;
+
+    font-size: 13px;
+}
+
+#listaCiclos button {
+    width: auto;
+
+    min-height: 36px;
+
+    padding: 7px 12px;
+
+    background-color: var(--verde-suave);
+
+    color: var(--verde-oscuro);
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MODALES
+========================================= */
+
+.aviso-oculto {
+    display: none;
+}
+
+.aviso-visible {
+    display: flex;
+
+    position: fixed;
+
+    inset: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+
+    background-color:
+        rgba(28, 37, 31, 0.62);
+
+    z-index: 1000;
+}
+
+.aviso-contenido {
+    width: 100%;
+    max-width: 520px;
+
+    max-height: 88vh;
+
+    overflow-y: auto;
+
+    padding: 24px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 14px 45px rgba(0, 0, 0, 0.18);
+}
+
+.aviso-contenido h2 {
+    margin-top: 0;
+}
+
+#listaPendientes > div {
+    margin-bottom: 10px;
+
+    padding: 12px;
+
+    background-color: #fafbfa;
+
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 750px) {
+
+    .cabeceraApp {
+        padding:
+            18px
+            14px
+            8px;
+
+        align-items: flex-start;
+    }
+
+    .marcaApp {
+        gap: 9px;
+    }
+
+    .iconoApp {
+        width: 38px;
+        height: 38px;
+
+        font-size: 18px;
+    }
+
+    .marcaApp h1 {
+        font-size: 23px;
+    }
+
+    .marcaApp p {
+        font-size: 12px;
+    }
+
+    #botonLogout {
+        flex-shrink: 0;
+
+        min-height: 34px;
+
+        padding: 7px 9px;
+
+        font-size: 12px;
+    }
+
+
+    /* CONTENIDO */
+
+    .contenidoApp {
+        padding:
+            10px
+            12px
+            35px;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    /* TARJETAS */
+
+    .tarjeta {
+        padding: 17px;
+
+        border-radius: 15px;
+    }
+
+    .tarjetaCompacta {
+        padding: 14px;
+    }
+
+
+    /* CABECERAS */
+
+    .cabeceraTarjeta {
+        margin-bottom: 18px;
+    }
+
+    .cabeceraTarjeta h2 {
+        font-size: 18px;
+    }
+
+    .cabeceraTarjeta p {
+        font-size: 12px;
+    }
+
+
+    /* CAMPOS */
+
+    .gridCampos {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    input,
+    select {
+        height: 44px;
+
+        font-size: 16px;
+    }
+
+
+    /* USUARIOS */
+
+    #usuariosViaje {
+        gap: 7px;
+    }
+
+    #usuariosViaje label {
+        padding: 8px 10px;
+
+        font-size: 13px;
+    }
+
+
+    /* FILAS COMPACTAS */
+
+    .filaCompacta {
+        gap: 10px;
+    }
+
+    .filaCompactaTexto {
+        min-width: 0;
+    }
+
+    .filaCompactaTexto h3 {
+        font-size: 15px;
+    }
+
+    .filaCompactaTexto p {
+        font-size: 11px;
+    }
+
+    .filaCompacta .botonSecundario {
+        flex-shrink: 0;
+
+        padding: 7px 10px;
+
+        font-size: 12px;
+    }
+
+
+    /* LISTAS */
+
+    #listaViajes li,
+    #listaRepostajes li {
+        padding: 11px;
+
+        font-size: 13px;
+    }
+
+
+    /* RESUMEN */
+
+    #resumenCiclo,
+    #historialCiclos {
+        grid-column: auto;
+    }
+
+    #contenidoResumenCiclo {
+        overflow-x: auto;
+    }
+
+
+    /* TARJETAS DE USUARIO */
+
+    #contenidoResumenCiclo table {
+        width: 100%;
+
+        min-width: 0;
+
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    #contenidoResumenCiclo table tr:first-child {
+        display: none;
+    }
+
+    #contenidoResumenCiclo table tr {
+        display: block;
+
+        margin-bottom: 9px;
+
+        padding: 12px;
+
+        background-color: #fafbfa;
+
+        border: 1px solid var(--borde);
+        border-radius: 11px;
+    }
+
+    #contenidoResumenCiclo table td {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 7px 0;
+
+        border-bottom: 1px solid var(--borde);
+
+        text-align: right;
+    }
+
+    #contenidoResumenCiclo table td:last-child {
+        border-bottom: none;
+    }
+
+    #contenidoResumenCiclo table td:nth-child(1)::before {
+        content: "Usuario";
+    }
+
+    #contenidoResumenCiclo table td:nth-child(2)::before {
+        content: "Km";
+    }
+
+    #contenidoResumenCiclo table td:nth-child(3)::before {
+        content: "Uso";
+    }
+
+    #contenidoResumenCiclo table td:nth-child(4)::before {
+        content: "Le corresponde";
+    }
+
+    #contenidoResumenCiclo table td:nth-child(5)::before {
+        content: "Ha pagado";
+    }
+
+    #contenidoResumenCiclo table td:nth-child(6)::before {
+        content: "Saldo";
+    }
+
+    #contenidoResumenCiclo table td::before {
+        color: #616c65;
+
+        font-weight: 600;
+
+        text-align: left;
+    }
+
+    #contenidoResumenCiclo
+    table
+    tr
+    td:first-child {
+        margin-bottom: 4px;
+
+        padding-bottom: 8px;
+
+        border-bottom:
+            2px solid var(--borde-fuerte);
+    }
+
+
+    /* PAGOS */
+
+    #contenidoResumenCiclo > div > div {
+        width: 100%;
+
+        min-height: 44px;
+
+        padding: 9px 8px;
+
+        gap: 11px;
+
+        font-size: 15px;
+    }
+
+    #contenidoResumenCiclo
+    input[type="checkbox"] {
+        width: 21px;
+        height: 21px;
+
+        min-width: 21px;
+
+        flex: 0 0 21px;
+    }
+
+
+    /* HISTORIAL */
+
+    #listaCiclos > div {
+        padding: 12px;
+    }
+
+    #listaCiclos button {
+        width: 100%;
+
+        min-height: 40px;
+    }
+
+
+    /* MODALES */
+
+    .aviso-contenido {
+        padding: 19px;
+
+        border-radius: 15px;
+    }
+}
+
+
+/* =========================================
+   MÓVIL MUY PEQUEÑO
+========================================= */
+
+@media (max-width: 430px) {
+
+    .marcaApp p {
+        display: none;
+    }
+
+    .iconoApp {
+        display: none;
+    }
+
+    .marcaApp h1 {
+        font-size: 21px;
+    }
+
+    .filaCompactaTexto p {
+        display: none;
+    }
+}
