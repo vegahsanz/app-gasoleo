@@ -893,6 +893,10 @@ ul {
     display: block;
 
     margin-right: 6px;
+
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 44px;
 }
    
     .cabeceraApp {
