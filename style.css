@@ -334,7 +334,9 @@ select:focus {
 .campo {
     min-width: 0;
 }
-
+.campoCompleto {
+    grid-column: 1 / -1;
+}
 
 /* =========================================
    USUARIOS
